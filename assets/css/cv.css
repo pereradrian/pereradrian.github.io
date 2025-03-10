@@ -218,10 +218,6 @@ p {
     margin-top: 6px;
 }
 
-.main-wrapper .section {
-    margin-bottom: 60px;
-}
-
 .main-wrapper .experiences-section .item {
     margin-bottom: 30px;
 }
@@ -384,11 +380,10 @@ p {
     display: flex;
     flex-flow: row wrap;
     padding-left: 1rem;
-    margin-bottom: 3rem;
 }
 
 .tool-item {
-    width: calc(15%);
+    width: calc(25%);
     min-width: 80px;
     display: flex;
     justify-content: space-between;
@@ -396,7 +391,7 @@ p {
     text-align: justify;
     list-style-type: none;
     margin-inline-start: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .tool-item-content {
@@ -411,7 +406,7 @@ p {
 }
 
 .skill-item {
-    width: calc(30%);
+    width: calc(45%);
     min-width: 120px;
     display: flex;
     justify-content: space-between;
