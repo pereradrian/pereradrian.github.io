@@ -644,3 +644,7 @@ table {
     display: flex;
     align-items: center;
 }
+
+.project-icon {
+    max-width: 40px;
+}
