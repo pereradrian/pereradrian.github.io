@@ -65,6 +65,7 @@
     min-height: 800px;
     color: var(--light-text);
     transition: all var(--transition-speed) ease;
+    overflow-y: scroll;
   }
   
   .sidebar-wrapper a {
@@ -578,8 +579,3 @@
   .scroll-to-top:hover {
     transform: translateY(-5px);
   }
-
-  .sidebar-data-container {
-    overflow-y: scroll;
-  }
-  
