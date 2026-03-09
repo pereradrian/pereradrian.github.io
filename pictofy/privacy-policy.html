@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — PictoFy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Variables ─────────────────────────────────────────────────────────── */
+    :root {
+      --bg:          #FFF8F0;
+      --card:        #FFFFFF;
+      --primary:     #9B7FD4;
+      --primary-dk:  #7B5FB4;
+      --mint:        #7EC8A4;
+      --peach:       #F5A882;
+      --text:        #3D3250;
+      --text-sec:    #8B7FA8;
+      --text-hint:   #C0B4D0;
+      --divider:     #EDE8F5;
+      --radius:      18px;
+      --shadow:      0 4px 20px rgba(155,127,212,.12);
+    }
+
+    /* ── Reset & base ──────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ────────────────────────────────────────────────────────────── */
+    header {
+      background: var(--card);
+      border-bottom: 2px solid var(--divider);
+      padding: 28px 24px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--shadow);
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--mint));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .logo-name {
+      font-size: 1.7rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--primary), var(--mint));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      font-size: 0.85rem;
+      color: var(--text-hint);
+      font-weight: 500;
+    }
+
+    /* ── Layout ────────────────────────────────────────────────────────────── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    /* ── Intro card ────────────────────────────────────────────────────────── */
+    .intro-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dk) 100%);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      color: #fff;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 32px rgba(155,127,212,.30);
+    }
+
+    .intro-card h1 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .intro-card p {
+      font-size: 0.95rem;
+      opacity: .88;
+      line-height: 1.65;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      background: rgba(255,255,255,.18);
+      border: 1px solid rgba(255,255,255,.30);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    /* ── Section cards ─────────────────────────────────────────────────────── */
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--divider);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .icon-purple { background: #EDE8F5; }
+    .icon-mint   { background: #E0F5EC; }
+    .icon-peach  { background: #FEF0E8; }
+    .icon-blue   { background: #E8F0FE; }
+
+    .section h2 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .section p,
+    .section li {
+      font-size: 0.92rem;
+      color: var(--text-sec);
+      line-height: 1.75;
+    }
+
+    .section ul {
+      padding-left: 0;
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .section ul li {
+      padding: 6px 0 6px 22px;
+      position: relative;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .section ul li:last-child { border-bottom: none; }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .section ul li.mint::before  { background: var(--mint); }
+    .section ul li.peach::before { background: var(--peach); }
+
+    /* ── Highlight box ─────────────────────────────────────────────────────── */
+    .highlight {
+      background: #EDE8F5;
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .highlight.mint {
+      background: #E0F5EC;
+      border-color: var(--mint);
+    }
+
+    /* ── Table ─────────────────────────────────────────────────────────────── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.88rem;
+    }
+
+    .data-table th {
+      background: var(--divider);
+      color: var(--text);
+      font-weight: 700;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child  { border-radius: 0 8px 0 0; }
+
+    .data-table td {
+      padding: 10px 14px;
+      color: var(--text-sec);
+      border-bottom: 1px solid var(--divider);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    /* ── Contact card ──────────────────────────────────────────────────────── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--mint) 0%, #5BB88A 100%);
+      border-radius: var(--radius);
+      padding: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(126,200,164,.30);
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 0.9rem;
+      opacity: .9;
+      margin-bottom: 16px;
+    }
+
+    .contact-card a {
+      display: inline-block;
+      background: rgba(255,255,255,.25);
+      border: 1px solid rgba(255,255,255,.40);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 24px;
+      border-radius: 24px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background .2s;
+    }
+
+    .contact-card a:hover { background: rgba(255,255,255,.38); }
+    .logo-icon img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 30%;
+    }
+
+    /* ── Footer ────────────────────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.78rem;
+      color: var(--text-hint);
+    }
+
+    /* ── Responsive ────────────────────────────────────────────────────────── */
+    @media (max-width: 520px) {
+      .section { padding: 22px 18px 18px; }
+      .intro-card { padding: 24px 20px; }
+      .intro-card h1 { font-size: 1.3rem; }
+      .data-table { font-size: 0.80rem; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────────────── -->
+  <header>
+    <div class="logo-row">
+      <div class="logo-icon">
+        <img src="./logo_v2_playstore.png" alt="Pictofy logo">
+      </div>
+      <span class="logo-name">PictoFy</span>
+    </div>
+    <p>Comunicación aumentativa y alternativa</p>
+  </header>
+
+  <main>
+
+    <!-- ── Intro ───────────────────────────────────────────────────────────── -->
+    <div class="intro-card">
+      <h1>Política de Privacidad</h1>
+      <p>
+        En PictoFy nos tomamos muy en serio la privacidad de nuestros usuarios.
+        Esta política describe qué información recopilamos, cómo la usamos y
+        cómo la protegemos. Está redactada de forma clara y accesible.
+      </p>
+      <div class="badge-row">
+        <span class="badge">Sin datos personales</span>
+        <span class="badge">Sin publicidad</span>
+        <span class="badge">Sin seguimiento</span>
+        <span class="badge">Datos anonimizados</span>
+      </div>
+    </div>
+
+    <!-- ── 1. Responsable ──────────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-purple">👤</div>
+        <h2>1. Responsable del tratamiento</h2>
+      </div>
+      <p>
+        PictoFy es una aplicación de comunicación aumentativa y alternativa (CAA)
+        desarrollada de forma independiente. No está vinculada a ninguna empresa
+        comercial. Para cualquier consulta sobre privacidad puedes contactar
+        a través del correo indicado al final de este documento.
+      </p>
+    </div>
+
+    <!-- ── 2. Qué datos recogemos ──────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-mint">📊</div>
+        <h2>2. Datos que recopilamos</h2>
+      </div>
+      <p>
+        PictoFy <strong>no recoge ningún dato personal identificable</strong>.
+        No se solicita nombre, correo electrónico, número de teléfono ni ningún
+        otro dato que permita identificar al usuario.
+      </p>
+      <p style="margin-top:12px;">
+        La aplicación genera un <strong>identificador de sesión anónimo</strong>
+        (UUID aleatorio) cada vez que se inicia. Este identificador no está
+        vinculado a ninguna cuenta ni dispositivo de forma permanente y se
+        descarta al cerrar la aplicación.
+      </p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Dato</th>
+            <th>Descripción</th>
+            <th>Finalidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ID de sesión</strong></td>
+            <td>UUID aleatorio, temporal</td>
+            <td>Agrupar eventos de una misma sesión</td>
+          </tr>
+          <tr>
+            <td><strong>Término buscado</strong></td>
+            <td>Palabra introducida en el buscador</td>
+            <td>Mejorar la relevancia de resultados</td>
+          </tr>
+          <tr>
+            <td><strong>ID de pictograma</strong></td>
+            <td>Identificador numérico del pictograma mostrado</td>
+            <td>Aprendizaje del sistema de ordenación</td>
+          </tr>
+          <tr>
+            <td><strong>Posición en frase</strong></td>
+            <td>Índice de la palabra en la frase (0, 1, 2…)</td>
+            <td>Investigación sobre patrones de uso CAA</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight">
+        Ninguno de estos datos permite identificar a ninguna persona.
+        No se almacena el texto completo de ninguna frase.
+      </div>
+    </div>
+
+    <!-- ── 3. Para qué usamos los datos ───────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-purple">🎯</div>
+        <h2>3. Finalidad del tratamiento</h2>
+      </div>
+      <p>Los datos estadísticos anonimizados se utilizan exclusivamente para:</p>
+      <ul>
+        <li>Mejorar la relevancia de los pictogramas mostrados para cada término.</li>
+        <li class="mint">Entrenar el sistema de ordenación interno de forma progresiva
+            (<em>aprendizaje online</em>), de modo que los pictogramas más
+            útiles aparezcan primero.</li>
+        <li>Investigar patrones de uso de la comunicación aumentativa y alternativa
+            con el objetivo de mejorar la accesibilidad.</li>
+        <li class="peach">Detectar términos frecuentes sin resultado para ampliar
+            la cobertura de la aplicación.</li>
+      </ul>
+      <div class="highlight mint">
+        Los datos nunca se venden, ceden ni comparten con terceros con fines
+        comerciales o publicitarios.
+      </div>
+    </div>
+
+    <!-- ── 4. Base legal ───────────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-blue">⚖️</div>
+        <h2>4. Base legal</h2>
+      </div>
+      <p>
+        El tratamiento de los datos estadísticos anonimizados se ampara en el
+        <strong>interés legítimo</strong> del desarrollador en mejorar la calidad
+        del servicio (art. 6.1.f del RGPD), dado que los datos no permiten
+        identificar a ninguna persona física y el impacto en la privacidad es
+        mínimo o nulo.
+      </p>
+      <p style="margin-top:10px;">
+        Al no tratarse de datos personales en sentido estricto, no es necesario
+        el consentimiento explícito del usuario para este tratamiento. No obstante,
+        el usuario puede solicitar en cualquier momento la eliminación de los
+        registros asociados a su sesión contactando con el desarrollador.
+      </p>
+    </div>
+
+    <!-- ── 5. Almacenamiento ───────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-mint">🗄️</div>
+        <h2>5. Almacenamiento y seguridad</h2>
+      </div>
+      <p>
+        Los datos estadísticos se almacenan en una base de datos alojada en
+        <strong>Cloudflare D1</strong> (infraestructura de Cloudflare, Inc.),
+        con centros de datos en la Unión Europea. Cloudflare actúa como
+        encargado del tratamiento y cumple con el RGPD.
+      </p>
+      <ul>
+        <li>La comunicación entre la app y el servidor se realiza mediante
+            <strong>HTTPS/TLS</strong>.</li>
+        <li class="mint">No se almacena ningún dato en el dispositivo del usuario
+            más allá de la caché temporal de imágenes de pictogramas.</li>
+        <li>Los registros de sesión se conservan durante un máximo de
+            <strong>12 meses</strong>, tras los cuales son eliminados
+            automáticamente.</li>
+      </ul>
+    </div>
+
+    <!-- ── 6. Terceros ─────────────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-peach">🔗</div>
+        <h2>6. Servicios de terceros</h2>
+      </div>
+      <p>PictoFy utiliza los siguientes servicios externos:</p>
+      <ul>
+        <li>
+          <strong>ARASAAC</strong> (Centro Aragonés para la Comunicación Aumentativa
+          y Alternativa) — proveedor de los pictogramas. Las búsquedas se envían
+          a la API pública de ARASAAC. Consulta su política en
+          <a href="https://arasaac.org" target="_blank" rel="noopener"
+             style="color:var(--primary);font-weight:700;">arasaac.org</a>.
+        </li>
+        <li class="mint">
+          <strong>Cloudflare Workers &amp; D1</strong> — infraestructura de
+          backend y base de datos. Consulta la política de Cloudflare en
+          <a href="https://www.cloudflare.com/privacypolicy/" target="_blank"
+             rel="noopener" style="color:var(--mint);font-weight:700;">cloudflare.com</a>.
+        </li>
+      </ul>
+      <div class="highlight">
+        PictoFy no integra SDKs de analítica de terceros (Google Analytics,
+        Firebase Analytics, etc.) ni redes publicitarias.
+      </div>
+    </div>
+
+    <!-- ── 7. Derechos ─────────────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-purple">🛡️</div>
+        <h2>7. Derechos del usuario</h2>
+      </div>
+      <p>
+        Dado que PictoFy no recoge datos personales identificables, la mayoría
+        de los derechos del RGPD (acceso, rectificación, portabilidad) no son
+        aplicables en la práctica. No obstante, reconocemos los siguientes derechos:
+      </p>
+      <ul>
+        <li><strong>Supresión:</strong> puedes solicitar la eliminación de los
+            registros estadísticos de tu sesión indicando el ID de sesión
+            (visible en los ajustes de la app) al contactar con el desarrollador.</li>
+        <li class="mint"><strong>Oposición:</strong> puedes oponerte al tratamiento
+            estadístico desinstalando la aplicación. No existe otra forma de
+            recopilación de datos.</li>
+        <li><strong>Reclamación:</strong> tienes derecho a presentar una reclamación
+            ante la Agencia Española de Protección de Datos (AEPD) en
+            <a href="https://www.aepd.es" target="_blank" rel="noopener"
+               style="color:var(--primary);font-weight:700;">aepd.es</a>.</li>
+      </ul>
+    </div>
+
+    <!-- ── 8. Menores ──────────────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-peach">👶</div>
+        <h2>8. Menores de edad</h2>
+      </div>
+      <p>
+        PictoFy está diseñada para ser utilizada por personas con necesidades de
+        comunicación aumentativa, incluyendo menores. Dado que la aplicación
+        <strong>no recoge datos personales</strong>, no existe riesgo específico
+        para la privacidad de los menores. Los datos estadísticos anonimizados
+        se tratan de la misma forma independientemente de la edad del usuario.
+      </p>
+    </div>
+
+    <!-- ── 9. Cambios ──────────────────────────────────────────────────────── -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-blue">🔄</div>
+        <h2>9. Cambios en esta política</h2>
+      </div>
+      <p>
+        Esta política puede actualizarse para reflejar cambios en la aplicación
+        o en la normativa aplicable. La fecha de última actualización aparece
+        al pie de esta página. Se notificará cualquier cambio relevante mediante
+        una actualización en la ficha de la Play Store.
+      </p>
+    </div>
+
+    <!-- ── Contacto ────────────────────────────────────────────────────────── -->
+    <div class="contact-card">
+      <h2>¿Tienes alguna pregunta?</h2>
+      <p>
+        Si tienes dudas sobre esta política o quieres ejercer alguno de tus
+        derechos, escríbenos. Respondemos en un plazo máximo de 30 días.
+      </p>
+      <p>odd.kernel.sl AT gmail.com</p>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────────────── -->
+  <footer>
+    <p>© 2026 PictoFy · Última actualización: marzo de 2026</p>
+    <p style="margin-top:4px;">
+      Los pictogramas son propiedad de
+      <a href="https://arasaac.org" target="_blank" rel="noopener"
+         style="color:var(--text-hint);">ARASAAC</a>
+      y se usan bajo licencia Creative Commons BY-NC-SA.
+    </p>
+  </footer>
+
+</body>
+</html>
